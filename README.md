@@ -3,7 +3,7 @@
 Welcome to **AI Restaurant Finder**, a cutting-edge application designed to help you find the perfect dining spots around you. Leveraging the power of Google APIs and AI, this tool delivers comprehensive restaurant Suggestions based on your location.
 
 
-## 🚀 How It Works
+### 🚀 How It Works
 
 1. **Enter Your Location:** Type your address into the search box.
 2. **Find Restaurants:** The app geocodes your location and fetches nearby restaurant options.
@@ -11,14 +11,14 @@ Welcome to **AI Restaurant Finder**, a cutting-edge application designed to help
 4. **Get Travel Information:** Check the distance and travel times to your chosen dining spots.
 5. **Make Reservations:** Book a table directly through the provided reservation links, if available.
 
-## 🎯 Key Features
+### 🎯 Key Features
 
 - **AI-Powered Recommendations:** Get the best dining options based on your location.
 - **Real-Time Travel Insights:** See estimated travel times for driving, walking, and public transit.
 - **Comprehensive Restaurant Details:** Access information on pricing, opening hours, and contact details.
 - **Reservation Links:** Easily make reservations with available booking links.
 
-## 🌟 Get Started
+### Get Started
 
 1. **Enter Your Location:** Simply input your address or area.
 2. **View Recommendations:** Discover top restaurant picks near you.
