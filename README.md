@@ -18,7 +18,7 @@ Welcome to **AI Restaurant Finder**, a cutting-edge application designed to help
 4. **Get Travel Information**: Check the distance and travel times to your chosen dining spots.
 
 
-![App Screenshot](images/img1.png)
+<img width="1458" alt="img1" src="https://github.com/user-attachments/assets/d8e49524-40f1-4d88-b4b1-b4269dd6f4e1">
 
 
-
+<a href="https://www.linkedin.com/in/mansi-more-0943/"> ![LinkedIn Profile](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white) </a>
