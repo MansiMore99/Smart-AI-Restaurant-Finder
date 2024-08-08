@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Restaurant Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/bg.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        .restaurant {
+            margin-bottom: 20px;
+        }
+        .restaurant img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #28a745;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Top 3 Restaurant Recommendations</h1>
+        {% for restaurant in restaurants %}
+            <div class="restaurant">
+                <h2>{{ restaurant.name }}</h2>
+                <p><strong>Address:</strong> {{ restaurant.vicinity }}</p>
+                <p><strong>Contact:</strong> {{ restaurant.formatted_phone_number or 'N/A' }}</p>
+                <p><strong>Distance:</strong> {{ restaurant.distance | round(2) }} miles</p>
+                <p><strong>Travel Times:</strong></p>
+                <ul>
+                    <li><strong>Driving:</strong> {{ restaurant.travel_times.driving }}</li>
+                    <li><strong>Walking:</strong> {{ restaurant.travel_times.walking }}</li>
+                    <li><strong>Transit:</strong> {{ restaurant.travel_times.transit }}</li>
+                </ul>
+                {% if restaurant.opening_hours %}
+                    <p><strong>Opening Hours:</strong></p>
+                    <ul>
+                        {% for period in restaurant.opening_hours.weekday_text %}
+                            <li>{{ period }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <p><strong>Price Range:</strong> {{ restaurant.price_range }}</p>
+                {% if restaurant.photos %}
+                    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{ restaurant.photos[0].photo_reference }}&key={{ API_KEY }}" alt="Restaurant Photo">
+                {% endif %}
+                {% if restaurant.reservation_link %}
+                    <p><strong>Reservations:</strong> <a href="{{ restaurant.reservation_link }}" target="_blank">Book a Table</a></p>
+                {% else %}
+                    <p><strong>Reservations:</strong> Not available</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+        <a href="/" class="back-link">Search Again</a>
+    </div>
+</body>
+</html>

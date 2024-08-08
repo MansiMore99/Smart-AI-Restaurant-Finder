@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 10px; /* Make the input box square */
+            border: none;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            border-radius: 10px; /* Make the submit button square */
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            cursor: pointer;
+            width: 80%;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .error {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Find Perfect Restaurant Nearby Your Location</h1>
+        <form method="POST">
+            <input type="text" name="address" placeholder="Enter your location" required>
+            <input type="submit" value="Search">
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
