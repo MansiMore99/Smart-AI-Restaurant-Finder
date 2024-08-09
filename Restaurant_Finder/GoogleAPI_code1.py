@@ -5,7 +5,7 @@ import math
 
 app = Flask(__name__)
 
-API_KEY = 'AIzaSyDIAm6lOUOI9gjgbeK8zpIOKjbdRgfYgxo'
+API_KEY = 'ENTER YOUR GOOGLE API KEY'
 PLACES_API_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json'
 DETAILS_API_URL = 'https://maps.googleapis.com/maps/api/place/details/json'
 GEOCODE_API_URL = 'https://maps.googleapis.com/maps/api/geocode/json'
